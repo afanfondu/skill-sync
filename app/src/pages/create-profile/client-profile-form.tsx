@@ -33,7 +33,7 @@ type ClientProfileFormValues = z.infer<typeof clientProfileSchema>
 export default function ClientProfileForm({ user }: { user: User }) {
   const navigate = useNavigate()
   const [imagePreview, setImagePreview] = useState<string | null>(
-    user.profilePicture
+    user?.profilePicture
   )
   const [imageFile, setImageFile] = useState<File | null>(null)
 

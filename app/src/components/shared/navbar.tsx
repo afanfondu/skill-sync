@@ -66,7 +66,7 @@ export default function Navbar() {
                       <Avatar>
                         {user.profile?.profilePicture && (
                           <AvatarImage
-                            src={`${config.apiUrl}/${user.profile.profilePicture}`}
+                            src={`${config.apiUrl}/${user.profile?.profilePicture}`}
                           />
                         )}
                         <AvatarFallback className="">

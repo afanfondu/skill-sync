@@ -59,7 +59,7 @@ const AVAILABLE_SKILLS = [
 export default function FreelancerProfileForm({ user }: { user: User }) {
   const navigate = useNavigate()
   const [imagePreview, setImagePreview] = useState<string | null>(
-    user.profilePicture
+    user?.profilePicture
   )
   const [imageFile, setImageFile] = useState<File | null>(null)
   const [skills, setSkills] = useState<string[]>([])
