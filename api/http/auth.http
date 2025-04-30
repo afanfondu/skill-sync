@@ -1,0 +1,31 @@
+@url = http://localhost:3000
+
+GET {{url}}/users/current-user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyODUxYjNiZS04YmM0LTRlYjctYjQ0MS1lMWM2YTVhNjFiOTMiLCJyb2xlIjoiY2xpZW50IiwiaWF0IjoxNzQ1NjgyMjM1LCJleHAiOjE3NDU2ODU4MzV9._hSrT9Hi8OwyeO96BQI7i8pWuiRlBVElbp0DIHfUFm8
+
+###
+
+GET {{url}}/auth/protected
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyODUxYjNiZS04YmM0LTRlYjctYjQ0MS1lMWM2YTVhNjFiOTMiLCJyb2xlIjoiY2xpZW50IiwiaWF0IjoxNzQ1NjgyMjM1LCJleHAiOjE3NDU2ODU4MzV9._hSrT9Hi8OwyeO96BQI7i8pWuiRlBVElbp0DIHfUFm8
+
+###
+
+POST {{url}}/auth/register
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john@doe.com",
+  "password": "password",
+  "role": "client"
+}
+
+###
+
+POST {{url}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@doe.com",
+  "password": "password"
+}
